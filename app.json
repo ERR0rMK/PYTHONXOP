@@ -1,0 +1,38 @@
+{
+  "name": "𝐌𝐊𝐱𝐒𝐏𝐀𝐌",
+  "description": "𝗧𝗘𝗟𝗘𝗚𝗥𝗔𝗠 𝗙𝗔𝗦𝗧 & 𝗦𝗠𝗢𝗢𝗧𝗛𝗘𝗦𝗧 𝗦𝗣𝗔𝗠 𝗕𝗬 @𝐇𝐀𝐂𝐊𝟑𝐑_𝐗𝐃",
+  "logo": "https://te.legra.ph/file/ec7492671007182f40a45.jpg",
+  "keywords": [
+    "spambot",
+    "telegram",
+    "userbot"
+  ],
+    "env": {
+      "STRING": {
+        "description": "Telethon String Session",
+        "value": "",
+        "required": true
+      },
+      "SUDO": {
+        "description": "Sudo Users Id",
+        "value": "",
+        "required": true
+      }
+  },
+
+  "addons": [{
+    "plan": "heroku-postgresql",
+    "options": {
+      "version": "12"
+    }
+  }],
+  "buildpacks": [{
+    "url": "https://github.com/opendoor-labs/heroku-buildpack-p7zip"
+  },{
+    "url": "https://github.com/heroku/heroku-buildpack-apt.git"
+  },{
+    "url": "https://github.com/chrismytton/heroku-buildpack-jq"
+  },{
+    "url": "heroku/python"
+  }]
+}
